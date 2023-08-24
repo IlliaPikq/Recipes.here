@@ -1,0 +1,58 @@
+---
+const encouragersText = [
+	{
+		title: 'Dont know what to eat today?',
+		talk: 'Not for long. Just visit our Recipes page'
+	},
+	{
+		title: 'You like to experiment ?',
+		talk: 'Thats great, because you have unlimited access to recipes from all over the world'
+	}
+]
+    
+    
+---
+
+<div class="encouragers">
+        {encouragersText.map(text => {
+            return (
+            <a class="encouragers_block" href="/recipes">
+            <h1>{text.title}</h1>
+            <p>{text.talk}</p>
+             <span class="arow">---></span>
+            </a>
+            )
+        })}
+</div>
+
+<style>
+    a, a:visited {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .encouragers {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: .5em;
+	}
+
+	.encouragers_block {
+		position: relative;
+		padding: 2em;
+		border-radius: 5px;
+		background-color: #141414;
+	}
+
+	.arow {
+		position: absolute;
+		top: .5rem;
+		right: .5em;
+	}
+
+    @media (max-width: 700px) {
+        .encouragers {
+            grid-template-columns: none;
+        }
+    }
+</style>
