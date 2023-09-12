@@ -12,16 +12,14 @@
     box-shadow: 10px 10px 10px 0px #191919;
 }
 .card {
-    padding: calc(1.5rem - 1px);
     border-radius: 8px;
     color: white;
-    background-color: #23262d;
-    opacity: 0.8;
+    background-color: #23262db2;
     transition: .3s ease;
 }
 
 .card:hover {
-    opacity: 1;
+    background-color: #23262d;
 }
 
 h2 {

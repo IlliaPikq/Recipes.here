@@ -1,1 +1,0 @@
-# Dont know what to eat today? # Not for long. Just visit Recipes page # You like to experiment? # Thats great now you can cook something you've never cooked before, just checkout Recipes page

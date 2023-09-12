@@ -1,4 +1,5 @@
-import Card from "./Card.jsx";
+import React from "react"
+import Card from "./Card.jsx"
 
 export const cardsContent = () => {
     const initialContent = [
@@ -46,7 +47,6 @@ const $body = returnItems('body')
     return initialContent
 }
 const fullCardsContent = cardsContent()
-
 export default function RecipesList() {
     return (
         <div className='wrapper'>
