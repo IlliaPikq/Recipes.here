@@ -32,43 +32,18 @@ p {
     margin-bottom: 0;
 }
 
-/* .container {
-    position: relative;
-}
-
 #deleteBtn {
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    background-color: transparent;
-    border: none;
-    width: 25px;
-    height: 25px;   
-}
-
-#deleteBtn::before, #deleteBtn::after {
-    position: absolute;
-    inset: 50%;
+    position: relative;
+    margin: 2em 0;
+    left: 50%;
     translate: -50%;
-    display: none;
-    content: '';
-    width: 25px;
-    height: 5px;
-    background-color: #fff;
-} 
-
-.card:hover #deleteBtn::before, .card:hover #deleteBtn::after {
-    display: block;
-}
-
-#deleteBtn::before {
-    rotate: 45deg;
-}
-
-#deleteBtn::after {
-    rotate: -45deg;
-}
-
-#deleteBtn:hover::before, #deleteBtn:hover::after {
+    border-radius: 5px;
+    border: 1px solid transparent;
+    padding: 1vw 2vw;
     background-color: red;
-} */
+    color: #fff;
+}
+
+#deleteBtn:hover {
+    background-color: #ff00009d;
+}

@@ -6,15 +6,24 @@
       translate: -50% -50%;
       display: grid;
       gap: 1em;
-      padding: 1em 2em;
+      border-radius: 5px;
+      padding: 4vw 2vw;
       background-color: #191919;
 }
 input[type='submit']  {
       border-radius: 5px;
-      border: none;
+      border: 1px solid transparent;
       padding: 0.5em 1em;
-      background-color: green;
+      background-color: #232323;
+      color: green;
+      transition: .3s ease;
 }
+
+input[type='submit']:hover {
+  cursor: pointer;
+  border-color: green;
+}
+
 </style>
 <form >
     <label for="title">Title: <input id='title' type="text" placeholder="Title" /></label>
@@ -34,6 +43,7 @@ input[type='submit']  {
     sessionStorage.setItem(`title-${uniqueId}`, titleValue)
     sessionStorage.setItem(`subtitle-${uniqueId}`, subtitleValue)
     sessionStorage.setItem(`body-${uniqueId}`, bodyValue)
+    console.log(uniqueId)
 
     window.location.href = "http://localhost:3000/recipes";
   })
