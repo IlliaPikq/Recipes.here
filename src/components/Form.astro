@@ -1,0 +1,41 @@
+<style>
+  form {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      display: grid;
+      gap: 1em;
+      padding: 1em 2em;
+      background-color: #191919;
+}
+input[type='submit']  {
+      border-radius: 5px;
+      border: none;
+      padding: 0.5em 1em;
+      background-color: green;
+}
+</style>
+<form >
+    <label for="title">Title: <input id='title' type="text" placeholder="Title" /></label>
+    <label for="subtitle">Subtitle: <input id='subtitle' type="text" placeholder="Subtitle" /></label>
+    <label for="body">Body: <input id='body' type="text" placeholder="Body" /></label>
+    <input type="submit" value="Post Recipe" />
+</form>
+<script>
+  const form = document.querySelector('form')
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const titleValue: string | number = (form.querySelector('#title') as HTMLInputElement).value
+    const subtitleValue: string | number = (form.querySelector('#subtitle') as HTMLInputElement).value
+    const bodyValue: string | number = (form.querySelector('#body') as HTMLInputElement).value
+
+    const uniqueId = Date.now()
+    sessionStorage.setItem(`title-${uniqueId}`, titleValue)
+    sessionStorage.setItem(`subtitle-${uniqueId}`, subtitleValue)
+    sessionStorage.setItem(`body-${uniqueId}`, bodyValue)
+
+    window.location.href = "http://localhost:3000/recipes";
+  })
+</script>
+ 

@@ -1,9 +1,16 @@
 ---
+import Card from "@components/Card.jsx";
 import Layout from "@layouts/Layout.astro"
+import RecipesList from "@components/RecipesList";
 ---
 
-<Layout title="Riceps Page">
+<Layout title="Recips Page">
     <body>
-        <h1>Recipes</h1>
+            <RecipesList  client:only/>
     </body>
 </Layout>
+<script>
+    const title = localStorage.getItem('title');
+    const subtitle = localStorage.getItem('subtitle');
+    const body = localStorage.getItem('body');
+</script>
