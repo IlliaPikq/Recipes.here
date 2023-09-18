@@ -5,9 +5,7 @@ import RecipesList from "@components/RecipesList";
 ---
 
 <Layout title="Recips Page">
-    <body>
-            <RecipesList  client:only/>
-    </body>
+    <RecipesList  client:only/>
 </Layout>
 <script>
     const title = localStorage.getItem('title');

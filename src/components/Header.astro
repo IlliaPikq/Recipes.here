@@ -1,10 +1,10 @@
 <header>
     <h1>Recipes.here</h1>
     <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/recipes">Recipes</a></li>
-            <li><a href="/create">Create</a></li>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="/">Home</a></li>
+            <li class="nav-item"><a href="/recipes">Recipes</a></li>
+            <li class="nav-item"><a href="/create">Create</a></li>
         </ul>
     </nav>
 </header>
@@ -12,20 +12,44 @@
 <style>
 
     header {
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: max(3em, 7vw);
     }
 
-    header ul {
+     
+    .nav-list {
+        padding: 0;
         display: flex;
-        gap: 2em;
+        gap: max(.5em, 5vw);
+    }
+    
+    
+    .nav-item {
+        list-style: none;
+        transition: .2s;
+    }
+    
+    .nav-item:hover {
+        color: #000;
+    }
+    @media (max-width: 700px) {
+        header {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .nav-item {
+            padding: .5em;
+            background-color: rgba(34, 34, 34, 0.745)
+        }
+
+        .nav-item:hover {
+            background-color: #000;
+            color: #fff;
+        }
     }
 
-    li {
-        list-style: none;
-    }
-    li:hover {
-		color: #000;
-    }
+   
 </style>
